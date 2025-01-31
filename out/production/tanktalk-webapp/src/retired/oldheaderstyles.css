@@ -1,0 +1,308 @@
+/* header
+
+.home-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: center;
+    z-index: 3;
+    position: fixed;
+    height: 50px;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.scrolled-header {
+    background-color: #F8F8F8;
+}
+
+.scrolled-header .navigation button {
+    color: #3c4043;
+     align-items: center;
+       appearance: none;
+       background-color: transparent;
+       border-radius: 8px;
+       border-style: none;
+       box-shadow: none;
+       box-sizing: border-box;
+       color: #3c4043;
+       cursor: pointer;
+       display: inline-flex;
+       font-family: "Google Sans",Roboto,Arial,sans-serif;
+       font-size: 11px;
+       font-weight: 600;
+       height: 34px;
+       justify-content: space-between;
+       letter-spacing: .25px;
+       line-height: normal;
+       max-width: 100%;
+       overflow: visible;
+       padding: 3px 24px;
+       position: relative;
+       text-align: center;
+       text-transform: none;
+       transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+       user-select: none;
+       -webkit-user-select: none;
+       touch-action: manipulation;
+       width: auto;
+       will-change: transform,opacity;
+       z-index: 0;
+}
+/ Hover effect for non-scrolled state /
+.home-header:not(.scrolled-header) .navigation button:hover {
+    background-color: #3C5068;
+    color: #E6EFFC;
+    border-color: #4A5E78;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(50, 50, 80, 0.4);
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+/ Active effect for non-scrolled state /
+.home-header:not(.scrolled-header) .navigation button:active {
+    background-color: #4A5E78;
+    color: #D9E4F2;
+    border-color: #5E7290;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+/ Focus effect for non-scrolled state /
+.home-header:not(.scrolled-header) .navigation button:focus {
+    color: #7398c7;
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+/ Styles for scrolled state (plain white background) /
+.home-header.scrolled-header .navigation button {
+    background-color: transparent; / No background /
+    color: #3c4043; / Gray text /
+    border: none;
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+/ Hover effect for scrolled state /
+.home-header.scrolled-header .navigation button:hover {
+    background-color: #F0F0F0;
+    color: #174ea6;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3), 0 8px 12px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+/ Active effect for scrolled state /
+.home-header.scrolled-header .navigation button:active {
+    background-color: #E0E0E0;
+    color: #174ea6;
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+.hamburger-menu:not(.active) .home-header .navigation {
+    display: flex; / Horizontal alignment for buttons /
+    align-text: center;
+    justify-content: center; / Center align all buttons /
+    gap: 10px; / Add spacing between buttons /
+    padding: 0 20px; / Breathing room on the sides /
+    box-sizing: border-box; / Include padding in width calculations /
+}
+
+
+.hamburger-menu:not(.active) .home-header .navigation {
+    display: flex; / Horizontal alignment for buttons /
+    align-text: center;
+    justify-content: center; / Center align all buttons /
+    gap: 10px; / Add spacing between buttons /
+    padding: 0 20px; /Breathing room on the sides/
+    box-sizing: border-box; / Include padding in width calculations /
+}
+.home-header .navigation button {
+    width: 120px; / Set a fixed width /
+    height: 40px; / Set a consistent height /
+    text-align: center; / Center align text inside the button /
+    justify-content: center;
+    line-height: 40px; / Vertically center text /
+    padding: 0; / Remove extra padding to fit fixed size /
+    margin: 0; /Reset margins /
+    transition: all 0.3s ease-in-out; / Smooth transitions /
+}
+
+
+.hamburger-menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0px;
+    margin-bottom: 20px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #3c4043;
+    transition: all 0.3s ease-in-out;
+
+}
+
+ //Animation for the active state
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(360deg);
+}
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-360deg);
+    opacity: 0;
+}
+*/
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: -11px;
+    margin-right: 40px;
+}
+
+.navigation button,
+.navigation .account {
+   align-items: center;
+   appearance: none;
+   background-color: transparent;
+   border-radius: 8px;
+   border-style: none;
+   box-shadow: none;/*rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;*/
+   box-sizing: border-box;
+   color: #3c4043;
+   cursor: pointer;
+   display: inline-flex;
+   font-family: "Google Sans",Roboto,Arial,sans-serif;
+   font-size: 11px;
+   font-weight: 600;
+   height: 34px;
+   justify-content: space-between;
+   letter-spacing: .25px;
+   line-height: normal;
+   max-width: 100%;
+   overflow: visible;
+   padding: 3px 24px;
+   position: relative;
+   text-align: center;
+   text-transform: none;
+   transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   width: auto;
+   will-change: transform,opacity;
+   z-index: 0;
+   margin-right: 2px;
+}
+
+.home .navigation button:hover,
+.home-main .cta:hover{
+    background: #F6F9FE;
+    color: #174ea6;
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+.home .navigation button:hover:active,
+.home-main .cta:hover:active,
+.email-signup button:hover:active{
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+.home .navigation button:hover:focus,
+.home-main .cta:hover:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                border-color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+.home .navigation button:hover:not(:disabled),
+.home-main .cta:hover:not(:disabled),
+.email-signup button:hover:not(:disabled){
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+    transition: background-color 200ms ease-in-out,
+            color 200ms ease-in-out,
+            border-color 200ms ease-in-out,
+            box-shadow 200ms ease-in-out;
+}
+
+.home .navigation button:hover:not(:disabled):hover,
+.home-main .cta:hover:not(:disabled):hover,
+.email-signup button:hover:not(:disabled):hover{
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.home .navigation button:hover:not(:disabled):focus,
+.home-main .cta:hover:not(:disabled):focus,
+.email-signup button:hover:not(:disabled):focus{
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.home .navigation button:hover:not(:disabled):active,
+.home-main .cta:hover:not(:disabled):active,
+.email-signup button:hover:not(:disabled):active{
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.home .navigation button:hover:disabled,
+.home-main .cta:hover:disabled,
+.email-signup button:hover:disabled{
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+
+}
+
+
+.home .navigation .cta,
+.home-main .cta {
+    background-color: #046ad0;
+    color: #FFEDE1;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    margin-right: 30px;
+}
+
+.home .navigation .account {
+    font-size: 13px;
+    background: none;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+}

@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap');
+
+
+/* Header Styling */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    height: 90px;
+    z-index: 5;
+    background-color: transparent; /* No background initially */
+    transition: background-color 0.1s ease-in-out;
+    overflow: hidden; /* Ensure ::after stays inside bounds */
+    box-sizing: border-box;
+} *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+
+/* Add Pseudo-Element for Expanding Background */
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Matches header height by default */
+    background-color: #F8F8F8; /* Background color for scrolled state */
+    transform: scaleY(0); /* Start collapsed vertically */
+    transform-origin: top; /* Expand from the top */
+    transition: transform 0.1s ease-in-out;
+    z-index: -1; /* Keep it behind the header content */
+}
+
+/* Scrolled State */
+.header.scrolled {
+    background-color: transparent; /* Ensure header itself doesn't have a background */
+    box-shadow: 1px 10px 15px 1px rgba(28, 28, 28, 0.2);
+}
+
+.header.scrolled::after {
+    transform: scaleY(1); /* Fully expand vertically */
+}
+
+
+/* Navigation Styling */
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 00px;
+    margin-right: 40px;
+}
+
+.navigation button {
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #F8F8F8;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    height: 44px;
+    width: 130px;
+    justify-content: space-between;
+    letter-spacing: 0.50px;
+    padding: 3px 34px;
+    text-align: center;
+    justify-content: center;
+    text-transform: none;
+    transition: background-color 200ms, color 200ms, box-shadow 200ms;
+    margin-right: 2px;
+    will-change: transform;
+}
+
+/* Navigation Button Hover State */
+.navigation button:hover {
+    background-color: #3C5068;
+    color: #E6EFFC;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(50, 50, 80, 0.4);
+    transition: background-color 200ms ease-in-out,
+                color 200ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+}
+
+/* Navigation Button Active State */
+.navigation button:active {
+    background-color: #4A5E78;
+    color: #D9E4F2;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Scrolled Header Navigation Button */
+.header.scrolled .navigation button {
+    color: #3c4043;
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 200ms, color 200ms, box-shadow 200ms;
+}
+
+/* Scrolled Header Navigation Button Hover */
+.header.scrolled .navigation button:hover {
+    background-color: #F0F0F0;
+    color: #174ea6;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3), 0 8px 12px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrolled Header Navigation Button Active */
+.header.scrolled .navigation button:active {
+    background-color: #E0E0E0;
+    color: #174ea6;
+    box-shadow: none;
+}
+
+/* CTA Button Styles */
+.navigation .cta {
+    background-color: #046ad0;
+    color: #FFEDE1;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    margin-right: 30px;
+}
+
+.navigation .cta:hover {
+    background-color: #04487f;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 6px -1px, rgba(0, 0, 0, 0.14) 0 6px 12px 0;
+}
+
+.navigation .cta:active {
+    background-color: #032e56;
+    color: #ffffff;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: flex;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    padding-left:
+}
+
+.hamburger-menu span {
+    display: none;
+    width: 25px;
+    height: 2px;
+    margin: 3px 0;
+    background-color:#F8F8F8;
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled .hamburger-menu span {
+    background-color: #3c4043;
+}
+/* Hamburger Menu Active Animation */
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(360deg);
+}
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-360deg);
+    opacity: 0;
+}
+
+.header {
+            background-color: rgba(211, 211, 211, 0.03);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(50, 50, 80, 0.05);
+        }
+
+@media (max-width: 940px) {
+    .header {
+        height: 50px; /* Default height */
+        transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Add transition for height */
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        top:10px;
+        left: 0;
+        right: 0;
+        margin-bottom: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .header.scrolled.navigation-open {
+        height: 100px;
+        background-color: #f8f8f8;
+        opacity: 1;
+        transition: height 0.3s ease-in-out, background-color 0.7s ease-in-out;
+        box-shadow: 1px 10px 7px 1px rgba(28, 28, 28, 0.2);
+    }
+
+
+    .header.navigation-open {
+        height: 100px;
+        background-color: transparent;
+        opacity: 1;
+        transition: height 0.3s ease-in-out, background-color 0.7s ease-in-out;
+        padding-bottom: 0px;
+
+    }
+
+
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.open {
+            padding: 25px 10px;
+            display: flex;
+            position: absolute;
+            top: 200; /* Align with the top of the header */
+            height: 120px;; /* Match the expanded header height */
+            align-items: center; /* Center buttons vertically */
+            justify-content: center; /* Center buttons horizontally */
+            flex-direction: row; /* Keep buttons in a row */
+            opacity: 1;
+            transform: translateY(0);
+            transition: transform 0.3s ease-in;
+            transform: translateY(0);
+            width: calc(100%);
+            padding-top: 50px;
+            margin: 0px;
+        }
+
+        .header:not(.scrolled) .navigation.open {
+            background-color: rgba(211, 211, 211, 0.05);
+        }
+
+
+        .navigation:not(.open) {
+             display: flex;
+             position: absolute;
+             top: 200; /* Align with the top of the header */
+             left: 10px;
+             right: 10px;
+             height: 100%; /* Match the expanded header height */
+             align-items: center; /* Center buttons vertically */
+             justify-content: center; /* Center buttons horizontally */
+             flex-direction: row; /* Keep buttons in a row */
+             opacity: 0;
+             transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+             transform: translateY(0);
+             width: calc(100% - 20px);
+             padding-top: 50px;
+        }
+
+    /* Navigation Buttons for Non-Scrolled State */
+    .header:not(.scrolled) .navigation.open {
+        height: 120px;
+        opacity: 1;
+    }
+
+
+
+    .navigation button {
+        width: 100%;
+        height: 44px;
+        padding: 10px 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .navigation button:hover {
+        background-color: #3C5068;
+        color: #E6EFFC;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(50, 50, 80, 0.4);
+        transition: background-color 200ms ease-in-out,
+                    color 200ms ease-in-out,
+                    box-shadow 200ms ease-in-out;
+    }
+
+
+    .hamburger-menu span {
+        display: block;
+        height: 2px;
+        background-color: #F8F8F8;
+        transition: all 0.3s ease-in-out;
+        width: 10%;
+    }
+
+    .hamburger-menu:hover {
+        background-color: transparent;
+    }
+
+
+    .scrolled .hamburger-menu span {
+        background-color: #3c4043;
+    }
+}
+
