@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/tanktalk-webapp.iml" filepath="$PROJECT_DIR$/.idea/tanktalk-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/personal-website-app.iml" filepath="$PROJECT_DIR$/.idea/personal-website-app.iml" />
     </modules>
   </component>
 </project>
