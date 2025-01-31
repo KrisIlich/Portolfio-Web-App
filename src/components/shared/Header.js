@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../../assets/styles/Header.css';
-import logoImage from '../../assets/images/logo.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { smoothScrollTo, smoothScrollToPosition } from '../utils/scrollUtils'; // <--- Make sure this path is correct
 
