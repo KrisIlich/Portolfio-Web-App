@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bfada445-b466-4ebb-b8d3-a7786c62f61c" name="Changes" comment="Made Select divs responsive&#10;- header / subheader&#10;- title&#10;- about me&#10;- heirloom">
+      <change beforePath="$PROJECT_DIR$/.idea/tanktalk-webapp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.firebaserc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.github/workflows/firebase-hosting-merge.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.github/workflows/firebase-hosting-pull-request.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/tanktalk-webapp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/__mocks__/axios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/__mocks__/fileMock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/__tests__/TankTalkerAIPage.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/__tests__/fetchGPTResponse.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/craco.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/database.rules.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/firebase.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/firestore.indexes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/firestore.rules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/jest.setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/api/authService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/api/chatGPT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/home-banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/logo_big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/logo_path.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/—Pngtree—mobile phone frame mockup png_5843187.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/styles/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/styles/Header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/styles/Home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/About.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/ChatBot/ChatBot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/ChatBot/ChatBot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/ChatBot/ChatBotInterface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/HomePage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/InquiryForm/InquiryForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/InquiryForm/InquiryForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/LoginPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/MyFitnessPal/CalorieCounter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/MyFitnessPal/CalorieCounter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/PlatformerGame/PlatformerGame.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/PlatformerGame/PlatformerGame.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/SkillsGrid/SkillsGrid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/SkillsGrid/SkillsGrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/TankTalkerAI/TankTalkerAIPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/TankTalkerAI/TankTalkerInterface.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/shared/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/shared/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/shared/SaveAsPDF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/utils/scrollUtils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/contexts/AuthContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/firebase-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/hooks/useAuth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/retired/TankTalkerAIPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/retired/TankTalkerInterface.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/retired/oldheaderstyles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/utils/fetchGPTRepsonse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/utils/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/storage.rules" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="16c24f1c864313478402e9997e34f521a10fa9d3" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="55ddacadfe5969573f535f37a4d291356cb15d73" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="072b5647-feb1-40ed-9778-de168f10ce7f" />
+        <option name="url" value="https://github.com/KrisIlich/TankTalk" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2bmcW6iAARCOnlTvx0nIrAs9Fm4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON Lines"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\k_ili\IdeaProjects\personal-website-app" />
+      <recent name="C:\Users\k_ili\IdeaProjects\tanktalk-webapp - edit\src\components" />
+      <recent name="C:\Users\k_ili\IdeaProjects\tanktalk-webapp - edit\src\retired" />
+      <recent name="C:\Users\k_ili\IdeaProjects\tanktalk-webapp\__tests__" />
+      <recent name="C:\Users\k_ili\IdeaProjects\tanktalk-webapp\src\api" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfada445-b466-4ebb-b8d3-a7786c62f61c" name="Changes" comment="" />
+      <created>1706823726973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706823726973</updated>
+      <workItem from="1706823728393" duration="2260000" />
+      <workItem from="1707754812580" duration="22142000" />
+      <workItem from="1708095149671" duration="28648000" />
+      <workItem from="1708355344847" duration="698000" />
+      <workItem from="1708531302398" duration="22682000" />
+      <workItem from="1708571942669" duration="343000" />
+      <workItem from="1708572317568" duration="3086000" />
+      <workItem from="1708611139000" duration="691000" />
+      <workItem from="1708962730288" duration="5366000" />
+      <workItem from="1708968832182" duration="23048000" />
+      <workItem from="1709737261872" duration="168000" />
+      <workItem from="1709738356656" duration="637000" />
+      <workItem from="1710183381062" duration="195000" />
+      <workItem from="1717429398797" duration="1361000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial Project Structure Setup">
+      <option name="closed" value="true" />
+      <created>1706825402430</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706825402430</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TankTalkAI - Added UI to house ChatGPT API">
+      <option name="closed" value="true" />
+      <created>1708572141978</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708572141978</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixup! TankTalkAI - Added UI to house ChatGPT API">
+      <option name="closed" value="true" />
+      <created>1708573341122</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708573341122</updated>
+    </task>
+    <task id="LOCAL-00004" summary="TankTalkAI - Added UI to house ChatGPT API">
+      <option name="closed" value="true" />
+      <created>1708573917138</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708573917138</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TankTalkAI - Added UI to house ChatGPT API">
+      <option name="closed" value="true" />
+      <created>1708574217148</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708574217148</updated>
+    </task>
+    <task id="LOCAL-00006" summary="TankTalkAI - Added UI to house ChatGPT API">
+      <option name="closed" value="true" />
+      <created>1708574604892</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708574604892</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Routing updates for chatbot API">
+      <option name="closed" value="true" />
+      <created>1709737299665</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709737299665</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Made Select divs responsive&#10;- header / subheader&#10;- title&#10;- about me&#10;- heirloom">
+      <option name="closed" value="true" />
+      <created>1737981715372</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737981715372</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/working" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Project Structure Setup" />
+    <MESSAGE value="fixup! TankTalkAI - Added UI to house ChatGPT API" />
+    <MESSAGE value="TankTalkAI - Added UI to house ChatGPT API" />
+    <MESSAGE value="Routing updates for chatbot API" />
+    <MESSAGE value="Made Select divs responsive&#10;- header / subheader&#10;- title&#10;- about me&#10;- heirloom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Select divs responsive&#10;- header / subheader&#10;- title&#10;- about me&#10;- heirloom" />
+  </component>
+</project>
