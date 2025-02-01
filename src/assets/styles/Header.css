@@ -232,7 +232,7 @@
             display: flex;
             position: absolute;
             top: 200; /* Align with the top of the header */
-            height: 120px;; /* Match the expanded header height */
+            height: 120px; /* Match the expanded header height */
             align-items: center; /* Center buttons vertically */
             justify-content: center; /* Center buttons horizontally */
             flex-direction: row; /* Keep buttons in a row */

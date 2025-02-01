@@ -6,10 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 100%;
   /* height: auto; or 100% if you want it filling the overlay */
-  margin-top: 20px;
-  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -329,17 +329,19 @@ html {
 .home-main .main-content .button-29 {
   align-items: center;
   appearance: none;
-  background: #FCFCFD;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
   border-width: 0;
+  border: solid .5px #f8f8f8;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #36395A;
+  color: #f8f8f8;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   height: 48px;
   width: 196px;
+  font-weight: 400;
   justify-content: center;
   line-height: 1;
   list-style: none;
@@ -848,7 +850,7 @@ Button div
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 270px;
+  width: 250px;
   height: auto;
   border-radius: 32px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
@@ -1292,7 +1294,6 @@ form-container {
             left: 70%;
 
             margin-right: 20px;
-            max-width: 190px;
         }
 
      .projects-title {
@@ -1331,7 +1332,6 @@ form-container {
     .heirloom-details {
             left: 70%;
             margin-right: 20px;
-            max-width: 190px;
         }
 
          .projects-title {
@@ -1479,7 +1479,6 @@ form-container {
 
 
     .heirloom-details {
-        max-width: 500px;
         width: 75%;
         left: 65%;
         top: 45%;
@@ -1488,7 +1487,6 @@ form-container {
 
     .heirloom-description {
          display: block; /* Hide regular description */
-         max-width: 55%;
      }
 
      .home-main .main-content {
@@ -1514,7 +1512,6 @@ form-container {
                   align-text: left;
                   margin: 0;
                   padding-bottom: 15px;
-                  max-width: 35%;
                 }
 
      .projects-title {
@@ -1538,6 +1535,11 @@ form-container {
            .fitness-pal-container .button-29 {
              height: 30px;
              width: 60px;
+           }
+
+           .vertical-world-container .button-29 {
+            height: 30px;
+            width: 60px;
            }
 
 
@@ -1569,12 +1571,9 @@ form-container {
     }
 
      .heirloom-details {
-       max-width: 500px;
        width: 75%;
        left: 65%;
        top: 35%;
-       padding-top: 20px;
-       padding-bottom: 15px;
      }
 
     .heirloom-title {
@@ -1587,7 +1586,6 @@ form-container {
              display: block;
              align-text: left;
              margin: 0;
-             max-width: 35%;
            }
 
 
@@ -1628,8 +1626,6 @@ form-container {
     }
 
     .heirloom-details {
-        border-radius: 32px;
-        margin: 0;
         left: 45%;
         top: 55%;
         height: 24%;
@@ -1643,6 +1639,7 @@ form-container {
 
       .vertical-world-img{
        transform: translateX(-2%);
+       transform: translateY(30%);
       }
 
       .heirloom-alt-description {
@@ -1666,7 +1663,8 @@ form-container {
       }
 
       .vertical-world-details-minimized.visible {
-        transform: translateX(-16%);
+        top: 0%;
+        transform: translateX(-20%);
       }
 
 
