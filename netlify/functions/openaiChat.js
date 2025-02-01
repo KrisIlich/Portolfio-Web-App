@@ -1,7 +1,7 @@
 exports.handler = async (event) => {
   try {
     const { prompt } = JSON.parse(event.body);
-    const apiKey = process.env.REACT_APP_OPEN_API_KEY;
+    const apiKey = process.env.OPENAI_API_KEY;
 
     // Q&A reference moved here to keep it secure
     const reference = `You are Kristopher Ilich’s personal assistant. Below is a reference of Q&A content about Kristopher’s background, work, and achievements. Only respond as if you are describing Kristopher’s work, skills, and achievements.
