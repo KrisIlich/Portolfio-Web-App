@@ -1,16 +1,21 @@
-import axios from "axios";
+const fetch = require("node-fetch"); // Only needed for older Netlify runtimes
+require("dotenv").config(); // Optional if testing locally
 
-const openAIKey = process.env.REACT_APP_OPEN_API_KEY;
-
-
-export const fetchChatGPTResponse = async (userInput) => {
+exports.handler = async (event) => {
     try {
-        const response = await axios.post(
-            'https://api.openai.com/v1/chat/completions', // Updated endpoint
-            {
-                model: "gpt-4", // Use a chat model like gpt-3.5-turbo or gpt-4
-                messages: [ {
-                       role: "system",
+        const { prompt } = JSON.parse(event.body);
+
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+            },
+            body: JSON.stringify({
+                model: "gpt-4",
+                messages: [
+                    {
+                        role: "system",
                        content: `You are Kristopher Ilich’s personal assistant. Below is a reference of Q&A content about Kristopher’s background, work, and achievements. Only respond as if you are describing Kristopher’s work, skills, and achievements.
 
                                  --------------------------------------------------------------------------------
@@ -113,37 +118,31 @@ export const fetchChatGPTResponse = async (userInput) => {
                                  6. Please provide answers in *Markdown format* (using headings, bold text, use bullet points, and paragraphs as needed).
                                  7. Format the messages like they are meant for imessaging on apple devices.
                                  8. Keep the answers short.`
-                     },
-                     {
-                       role: "user",
-                       content: userInput
-                     }
-                 ],
-                temperature: 0.7,
-                max_tokens: 500,
-                top_p: 1,
-                frequency_penalty: 0,
-                presence_penalty: 0,
-            },
-            {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${openAIKey}`
-                }
-            }
-        );
+                      },
+                                         {
+                                             role: "user",
+                                             content: prompt,
+                                         },
+                                     ],
+                                     temperature: 0.7,
+                                     max_tokens: 500,
+                                     top_p: 1,
+                                     frequency_penalty: 0,
+                                     presence_penalty: 0,
+                                 }),
+                             });
 
-        // Log the entire response for debugging
-        console.log("OpenAI Response:", response.data);
+                             const data = await response.json();
 
-        // Safely access the response data
-        const aiText = response.data?.choices?.[0]?.message?.content?.trim();
-        if (!aiText) {
-            throw new Error("AI response is empty or malformed.");
-        }
-        return aiText;
-    } catch (error) {
-        console.error("Error fetching response from OpenAI: ", error.response || error);
-        return "Sorry, I could not process that.";
-    }
-};
+                             return {
+                                 statusCode: 200,
+                                 body: JSON.stringify({ message: data.choices[0].message.content.trim() }),
+                             };
+                         } catch (error) {
+                             console.error("Error calling OpenAI:", error);
+                             return {
+                                 statusCode: 500,
+                                 body: JSON.stringify({ error: "Failed to process AI request" }),
+                             };
+                         }
+                     };

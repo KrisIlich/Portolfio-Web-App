@@ -5,89 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfada445-b466-4ebb-b8d3-a7786c62f61c" name="Changes" comment="Made Select divs responsive&#10;- header / subheader&#10;- title&#10;- about me&#10;- heirloom">
-      <change beforePath="$PROJECT_DIR$/.idea/tanktalk-webapp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.firebaserc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.github/workflows/firebase-hosting-merge.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.github/workflows/firebase-hosting-pull-request.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/tanktalk-webapp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/__mocks__/axios.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/__mocks__/fileMock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/__tests__/TankTalkerAIPage.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/__tests__/fetchGPTResponse.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/craco.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/database.rules.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/firebase.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/firestore.indexes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/firestore.rules" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/functions/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/jest.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/jest.setup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/api/authService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/api/chatGPT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/home-banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/logo_big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/logo_path.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/images/—Pngtree—mobile phone frame mockup png_5843187.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/styles/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/styles/Header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/styles/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/assets/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/About.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/ChatBot/ChatBot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/ChatBot/ChatBot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/ChatBot/ChatBotInterface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/HomePage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/InquiryForm/InquiryForm.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/InquiryForm/InquiryForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/LoginPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/MyFitnessPal/CalorieCounter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/MyFitnessPal/CalorieCounter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/PlatformerGame/PlatformerGame.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/PlatformerGame/PlatformerGame.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/SkillsGrid/SkillsGrid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/SkillsGrid/SkillsGrid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/TankTalkerAI/TankTalkerAIPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/TankTalkerAI/TankTalkerInterface.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/shared/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/shared/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/shared/SaveAsPDF.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/components/utils/scrollUtils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/contexts/AuthContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/firebase-config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/hooks/useAuth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/retired/TankTalkerAIPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/retired/TankTalkerInterface.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/retired/oldheaderstyles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/utils/fetchGPTRepsonse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/src/utils/helpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tanktalk-webapp/storage.rules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchGPTRepsonse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchGPTRepsonse.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +52,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -145,31 +65,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "kotlin-language-version-configured": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/k_ili/IdeaProjects/personal-website-app/src&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JSON Lines"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON Lines&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\k_ili\IdeaProjects\personal-website-app" />

@@ -1,0 +1,157 @@
+/* ChatBot.css */
+
+/* Container for the main chatbot component */
+.chat-bot-container {
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  /* height: auto; or 100% if you want it filling the overlay */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chat-bot-title {
+  color: #046ad0;
+  margin-bottom: 10px;
+}
+
+.chat-bot-search-form {
+   display: flex; /* Set the form as a flex container */
+    align-items: center; /* Vertically align the items */
+    width: 100%; /* Match the form width to the container */
+    margin: 0 auto; /* Center the form horizontally */
+    box-shadow: 1px 10px 5px 1px rgba(128, 128, 128, 0.3);
+    background-color: transparent;
+}
+
+.chat-bot-search-form form {
+    background-color: transparent;
+}
+
+.chat-bot-search-input::placeholder {
+    color: black;
+}
+
+.chat-bot-search-input {
+  flex: 1;
+  height: 66px;
+  width: 100%;
+  padding: 0 12px;
+  font-size: 12px;
+  border: 1px solid #dfe1e5;
+  box-sizing: border-box;
+  resize: none;
+  border-right: none;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.chat-bot-search-button {
+  height: 66px;
+  align-items: center;
+  width: 100%;
+  max-width: 100px;
+  background-color: #f8f8f8;
+  color: #3c4043;
+  border: 1px solid #dfe1e5;
+  border-left: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.chat-bot-search-button:hover {
+  background-color: #f0f0f0;
+}
+
+.chat-bot-search-button:active {
+  background-color: #ebebeb;
+}
+
+/* ChatBotInterface Styles */
+.chatbot-interface {
+  height: 500px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-height: 600px;
+  min-width: 100px;
+  overflow-y: auto;
+}
+
+.message {
+  display: block;          /* Each bubble on its own line */
+  align-self: flex-start;  /* All messages left-aligned */
+  margin: 5px 0;            /* Vertical spacing between bubbles */
+  text-align: left;
+  border-radius: 4px;
+  line-height: 1.4;
+  max-width: 40vw;         /* Limit each bubble to 40% of viewport width */
+  word-wrap: break-word;   /* Prevent overflow on long words */
+  padding: 10px 15px 0px 7px;
+}
+
+/* You can style user vs. AI messages differently */
+.message.user {
+  align-self: flex-end;
+  background-color:  #046ad0;
+  color: white;
+  justify-content: left;
+  text-align: left;
+  max-width: 55vw;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  padding: 10px 15px 0px 7px;
+}
+
+.message.ai {
+  align-self: flex-start;
+  background-color: #f4f4f4;
+  text-align: left;
+  max-width: 300px;
+  white-space: pre-wrap;
+  border-radius: 6px;
+  max-width: 60vw;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #999;
+  border-radius: 50%;
+  animation: typing 2s infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.2;
+  }
+}

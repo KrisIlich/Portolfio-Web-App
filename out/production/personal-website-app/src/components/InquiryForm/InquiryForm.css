@@ -1,0 +1,75 @@
+/* InquiryForm.css */
+.inquiry-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(211, 211, 211, 0.05);
+  text-align: left;
+  box-shadow: 1px 15px 6px 1px rgba(0, 0, 0, 0.1);
+}
+
+.inquiry-form-container h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #ebebeb;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: rgba(235, 235, 235, 1);
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-group input {
+    background-color: rgba(211, 211, 211, 0.05);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 0px;
+  box-sizing: border-box;
+  color: rgba(211, 211, 211, 0.3);
+  border: none;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+}
+
+.inquiry-form-container button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #ebebeb;
+  background-color: transparent;
+  border: solid 0.5px rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(211, 211, 211, 0.3);
+}
+
+.success-message {
+  text-align: center;
+  font-size: 16px;
+  color: #4caf50;
+  margin-top: 20px;
+}
