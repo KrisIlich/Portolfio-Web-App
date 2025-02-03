@@ -72,6 +72,8 @@ useEffect(() => {
   }, []);
 
 
+
+
 useEffect(() => {
   const botDetails = document.querySelector('.chat-bot-details');
   if (!botDetails) return;
@@ -317,7 +319,7 @@ const handleCloseModal = () => {
           platformerDetails?.classList.remove('visible');
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.01 }
     );
     if (platformerDetails) {
       platformerObserver.observe(platformerDetails);
@@ -333,6 +335,20 @@ const handleCloseModal = () => {
     };
   }, []);
 
+
+  useEffect(() => {
+    // This useEffect clears the scroll position when the page is unloaded.
+    const clearScrollPositionOnExit = () => {
+      localStorage.removeItem('scrollPosition');
+      localStorage.removeItem('fromModal');
+    };
+
+    window.addEventListener('unload', clearScrollPositionOnExit);
+
+    return () => {
+      window.removeEventListener('unload', clearScrollPositionOnExit);
+    };
+  }, []);
 
 
   return (
