@@ -1,0 +1,33 @@
+/* Fullscreen white overlay */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999; /* Ensure it's above all other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loader styling: a circular dial with a greyish-blue border that animates clockwise */
+.splash-loader {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #c0d3e2;      /* Light greyish-blue color */
+  border-top: 8px solid #5a7eff;   /* Darker accent color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes for a smooth clockwise spin */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

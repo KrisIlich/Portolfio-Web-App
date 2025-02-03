@@ -4,7 +4,6 @@ import ChatBotInterface from './ChatBotInterface';
 import { fetchChatGPTResponse } from '../../utils/fetchGPTResponse';
 import './ChatBot.css';
 
-
 const ChatBot = () => {
   const [input, setInput] = useState('');
   const [conversation, setConversation] = useState([]);
@@ -24,6 +23,15 @@ const ChatBot = () => {
     setInput(e.target.value);
   };
 
+  // New: Handle keyDown to detect Enter key
+  const handleKeyDown = (e) => {
+    // If Enter is pressed without Shift (allowing Shift+Enter for newline)
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault(); // Prevent newline insertion
+      handleSubmit(e);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return; // Prevent empty submissions
@@ -39,9 +47,7 @@ const ChatBot = () => {
       const aiResponse = { sender: 'ai', text: aiText };
       setConversation((conv) => [...conv, aiResponse]);
     } catch (error) {
-      // Handle the error gracefully:
       console.error('Error fetching AI response:', error);
-      // Optionally display an error message in the chat:
       setConversation((conv) => [
         ...conv,
         {
@@ -50,7 +56,6 @@ const ChatBot = () => {
         },
       ]);
     } finally {
-      // Always clear typing state
       setIsTyping(false);
     }
   };
@@ -65,11 +70,12 @@ const ChatBot = () => {
 
       <form onSubmit={handleSubmit} className="chat-bot-search-form">
         <textarea
-          type="text"
           value={input}
           onChange={handleInputChange}
+          onKeyDown={handleKeyDown}  // Added keyDown handler
           className="chat-bot-search-input"
           placeholder="Ask your questions here..."
+          style={{ fontSize: '16px' }} // Ensure font-size is 16px or above to prevent zoom
         />
         <button type="submit" className="chat-bot-search-button">
           Ask

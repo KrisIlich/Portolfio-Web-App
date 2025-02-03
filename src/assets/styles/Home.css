@@ -268,8 +268,9 @@ html {
 }
 
 .button-29 {
-  margin-top: 30px;
+  width: 100%;
   align-items: center;
+  justify-content: center;
   appearance: none;
   background-image: radial-gradient(100% 100% at 100% 0, #5a7eff 0, #3648cf 100%);
   border: 0;
@@ -281,7 +282,6 @@ html {
   display: inline-flex;
   font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   height: 48px;
-  justify-content: center;
   line-height: 1;
   list-style: none;
   overflow: hidden;
@@ -507,7 +507,6 @@ input::placeholder{
     overflow: hidden;
     padding-top: 0px;
     background-color: #F8F8F8;
-
 }
 
 .heirloom-wrapper {
@@ -594,9 +593,6 @@ input::placeholder{
     font-size: clamp(.68rem, 2.5vw, .75rem);
 }
 
-
-
-
 .heirloom-img {
     margin: 0;
     padding: 0;
@@ -634,6 +630,15 @@ input::placeholder{
 .projects-title h1 {
     margin: 0;
     padding: 0;
+}
+
+/***************************************
+shared styles
+****************************************/
+
+.chat-bot-container p, .heirloom-container p,
+ .fitness-pal-container p, .vertical-world-container p{
+    padding-bottom: 15px;
 }
 
 
@@ -692,13 +697,12 @@ input::placeholder{
 }
 
 .chat-bot-title {
-  margin: 0 0 10px 0;
+  margin: 0 0 0px 0;
   font-size: clamp(1.2rem, 3vw, 1.6rem);
   box-border: boarder-box;
 }
 
 .chat-bot-description {
-    display: flex;
     font-size: clamp(.68rem, 2.5vw, .75rem);
 }
 
@@ -720,19 +724,11 @@ input::placeholder{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* translucent dark overlay */
+  background-color: #fff; /* translucent dark overlay */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999; /* ensure on top of everything */
-}
-
-.chat-bot-container button {
-    margin: 0;
-}
-
-.chat-bot-container p {
-    padding-bottom: 15px;
 }
 
 /*
@@ -797,16 +793,6 @@ input::placeholder{
   max-width: 100%;
   height: calc(100% - 100px); /* if you want to fit under the close button area, adjust as needed */
   max-height: none;
-}
-/****************************************
-Button div
-****************************************/
-.ai-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.ai-buttons button{
 }
 
 
@@ -906,7 +892,7 @@ Button div
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* translucent dark overlay */
+  background-color: #fff; /* translucent dark overlay */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -944,6 +930,17 @@ Button div
 
 .fitness-pal-close-button:hover {
   background-color: #eee;
+}
+
+/****************************************
+Button div
+****************************************/
+.fitness-buttons {
+    gap: 5px;
+    align-items: center;
+
+}
+.fitness-buttons button{
 }
 
 /****************************************
@@ -1032,7 +1029,7 @@ Button div
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1538,6 +1535,11 @@ form-container {
            }
 
            .vertical-world-container .button-29 {
+            height: 30px;
+            width: 60px;
+           }
+
+           .heirloom-container a {
             height: 30px;
             width: 60px;
            }

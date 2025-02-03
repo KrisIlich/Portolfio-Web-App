@@ -6,11 +6,13 @@ import MyFitnessPal from './MyFitnessPal/CalorieCounter';
 import PlatformerGame from './PlatformerGame/PlatformerGame';
 import SkillsGrid from './SkillsGrid/SkillsGrid';
 import InquiryForm from './InquiryForm/InquiryForm';
+import SplashScreen from './SplashScreen/SplashScreen';
 import handleHomeClick from './shared/Header';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { smoothScrollTo, smoothScrollToPosition } from './utils/scrollUtils';
 
-const HomePage = () => {
+const HomePage = ({triggerSplash}) => {
+
   // Refs
   const heirloomContainerRef = useRef(null);
   const aiContainerRef = useRef(null);
@@ -43,6 +45,32 @@ const HomePage = () => {
   const toggleSubheader = () => {
     setIsSubheaderVisible((prev) => !prev);
   };
+
+useEffect(() => {
+  const savedScrollY = localStorage.getItem('scrollPosition');
+  if (savedScrollY) {
+    window.scrollTo(0, Number(savedScrollY));
+  }
+}, [])
+
+ useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.setItem('scrollPosition', window.scrollY.toString());
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, []);
+
+  // Restore scroll position on mount
+  useEffect(() => {
+    const savedScrollY = localStorage.getItem('scrollPosition');
+    if (savedScrollY) {
+      window.scrollTo(0, Number(savedScrollY));
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
 
 useEffect(() => {
   const botDetails = document.querySelector('.chat-bot-details');
@@ -93,7 +121,7 @@ useEffect(() => {
     useEffect(() => {
       const interval = setInterval(() => {
         setIndex((prev) => (prev + 1) % words.length);
-      }, 2500);
+      }, 3100);
       return () => clearInterval(interval);
     }, []);
 
@@ -170,43 +198,31 @@ useEffect(() => {
 const handleCloseModal = () => {
   setIsChatOpen(false);
 
-  setTimeout(() => {
-    const botDetails = document.querySelector('.chat-bot-details');
-    if (!botDetails) return;
-
-    // 1) Force remove .visible
+  // (Optional) Extra DOM reflow logic for chat-bot details…
+  const botDetails = document.querySelector('.chat-bot-details');
+  if (botDetails) {
     botDetails.classList.remove('visible');
-
-    // 2) Force a DOM re-flow
-    // Reading `offsetHeight` ensures the browser flushes any pending styles
-    // so that a subsequent .classList.add('visible') triggers the CSS transition
-    void botDetails.offsetHeight;
-
-    // 3) Check if in viewport
+    void botDetails.offsetHeight; // Force reflow
     const rect = botDetails.getBoundingClientRect();
-    const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
-
-    // 4) If it's in viewport, re-add .visible so it re-animates from left to right
-    if (inViewport) {
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
       botDetails.classList.add('visible');
     }
-
-    // 5) If you want the observer to keep doing its normal job,
-    //    you can unobserve/observe. But if the user hasn't scrolled,
-    //    the intersection won't change. This is optional.
     if (botObserverRef.current) {
       botObserverRef.current.unobserve(botDetails);
       botObserverRef.current.observe(botDetails);
     }
-  }, 100);
-  const currentScrollY = window.scrollY;
-    localStorage.setItem('scrollPosition', currentScrollY.toString());
+  }
 
-    // 2. Reload the page
-    window.location.reload();
-    setIsScrolled();
+  // Save the current scroll position, set a flag, and record the current timestamp
+  localStorage.setItem('scrollPosition', window.scrollY.toString());
+  localStorage.setItem('fromModal', 'true');
+  localStorage.setItem('modalTimestamp', Date.now().toString());
+
+  // Trigger the splash screen (which eventually re-mounts HomePage)
+  if (triggerSplash) {
+    triggerSplash();
+  }
 };
-
 
   // On mount
   useEffect(() => {
@@ -317,6 +333,8 @@ const handleCloseModal = () => {
     };
   }, []);
 
+
+
   return (
     <div className="home-page">
       <Header
@@ -338,6 +356,7 @@ const handleCloseModal = () => {
             className="button-29"
             role="button"
             onClick={() => smoothScrollTo('projects-section')}
+            style={{ marginTop: '30px'}}
           >
             View My Work
           </button>
@@ -418,9 +437,9 @@ const handleCloseModal = () => {
               <p className="heirloom-alt-description">
                 Currently in development with Swift, Shopify API, and GCP, Heirloom is a marketplace that utilizes Lidar to let users present 3D items for immersive buying and selling.
               </p>
-              <button className="button-29" role="button">
+              <a href="https://www.github.com/krisilich/ios-marketplace" className="button-29">
                 Learn More
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -449,20 +468,24 @@ const handleCloseModal = () => {
                       management to deliver AI-driven responses about my skills, projects,
                       and experience. Click below to try it out!
                   </p>
-                  <div className="ai-buttons">
                       <button
                         className="button-29"
                         onClick={() => setIsChatOpen(true)}
+                        style={{ marginBottom: '7px'}}
                       >
-                        Try it out
+                        Try it out!
                       </button>
+                      <a
+                        href="https://github.com/KrisIlich/ai-chat-bot"
+                        style={{ display: 'inline-block', textDecoration: 'none' }} // Ensures correct positioning
+                      >
                       <button
                       className="button-29"
-                      onClick={() => setIsChatOpen(true)}
+                      style={{ height: '25px', background : 'transparent', color: '#3c4043', borderRadius: '4px'}}
                     >
                       Learn More
                     </button>
-                </div>
+                    </a>
                 </div>
               </div>
             )}
@@ -511,9 +534,22 @@ const handleCloseModal = () => {
                   It quickly computes your daily calorie intake and macros, making it easy
                   to stay on track with your goals.
                 </p>
-                <button className="button-29" onClick={() => setIsFitnessPalOpen(true)}>
-                  Try It Out
+                  <button
+                    className="button-29"
+                    onClick={() => setIsFitnessPalOpen(true)}
+                    style={{ marginBottom: '7px'}}
+                  >
+                    Try it out!
+                  </button>
+                  <a href="https://github.com/KrisIlich/CalorieCounter">
+                  <button
+                  className="button-29"
+                  style={{ height: '25px', background : 'transparent', color: '#3c4043', borderRadius: '4px'}}
+
+                >
+                  Learn More
                 </button>
+                </a>
               </div>
             </div>
           )}
@@ -564,9 +600,22 @@ const handleCloseModal = () => {
                      gameplay experience. The design emphasizes replayability through
                      adaptable, scalable logic.
                </p>
-               <button className="button-29" onClick={() => setIsVerticalWorldOpen(true)}>
-                 Play Now
+                <button
+                   className="button-29"
+                   onClick={() => setIsVerticalWorldOpen(true)}
+                   style={{ marginBottom: '7px'}}
+                 >
+                   Try it out!
+                 </button>
+                 <a href="https://github.com/KrisIlich/vertical-world">
+                 <button
+                 className="button-29"
+                 style={{ height: '25px', background : 'transparent', color: '#3c4043', borderRadius: '4px'}}
+
+               >
+                 Learn More
                </button>
+               </a>
              </div>
            </div>
          )}
