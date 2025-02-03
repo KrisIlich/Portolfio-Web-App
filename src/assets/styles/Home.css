@@ -1663,14 +1663,18 @@ form-container {
 
       }
 
+      .fitness-pal-details-minimized {
+        left: 62%;
+      }
+
 
     .vertical-world-details-minimized {
-        transform: translateX(-80%);
+        transform: translateX(-70%);
       }
 
       .vertical-world-details-minimized.visible {
         top: 0%;
-        transform: translateX(-20%);
+        transform: translateX(-15%);
       }
 
 
