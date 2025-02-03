@@ -1504,7 +1504,7 @@ form-container {
      }
 
      .heirloom-alt-description {
-
+                  max-width: 30%;
                   display: block;
                   align-text: left;
                   margin: 0;
@@ -1542,6 +1542,10 @@ form-container {
            .heirloom-container a {
             height: 30px;
             width: 60px;
+           }
+
+           .fitness-pal-details-minimized {
+                left: 76%;
            }
 
 
